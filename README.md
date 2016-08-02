@@ -74,10 +74,10 @@ $ mariadbrestore < mysql.sql
 mariadb -u username -p
 Enter password:
 
-CREATE DATABASE mydb
-USE mydb
+> CREATE DATABASE mydb;
+> USE mydb;
 
-CREATE TABLE movies (
+> CREATE TABLE movies (
   movie_id INT AUTO_INCREMENT PRIMARY KEY,
   movie_name VARCHAR(255),
   movie_type TINYINT

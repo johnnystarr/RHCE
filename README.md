@@ -20,7 +20,7 @@
 - Configure host-based and user-based security for the service
 
 ###HTTP/HTTPS
-- `vi /etc/apache2/sites-available/default.conf` Configure a virtual host
+- `vi /etc/httpd/sites-available/default.conf` Configure a virtual host
 ```
 <VirtualHost *:80>
   ProxyPreserveHost On
@@ -62,4 +62,24 @@
 - `yum install -y mariadb-client mariadb-server` Install and configure MariaDB
 - Backup and restore a database
 - Create a simple database schema
+
+```
+mariadb -u username -p
+Enter password:
+
+CREATE DATABASE mydb
+USE mydb
+
+CREATE TABLE movies (
+  movie_id INT AUTO_INCREMENT PRIMARY KEY,
+  movie_name VARCHAR(255),
+  movie_type TINYINT
+);
+```
 - Perform simple SQL queries against a database
+
+```
+> SELECT * FROM movies;
+> SELECT * FROM movies WHERE movie_type = 1;
+> SELECT * FROM movies WHERE move_name LIKE 'star wars';
+```

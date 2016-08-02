@@ -1,0 +1,56 @@
+###System configuration and management
+- Use network teaming or bonding to configure aggregated network links between two Red Hat Enterprise Linux systems
+- Configure IPv6 addresses and perform basic IPv6 troubleshooting
+- Route IP traffic and create static routes
+- Use firewalld and associated mechanisms such as rich rules, zones and custom rules, to implement packet filtering and configure network address translation (NAT)
+- Configure a system to authenticate using Kerberos
+- Configure a system as either an iSCSI target or initiator that persistently mounts an iSCSI target
+- Produce and deliver reports on system utilization (processor, memory, disk, and network)
+- Use shell scripting to automate system maintenance tasks
+
+###Network services
+
+####Network services are an important subset of the exam objectives. RHCE candidates should be capable of meeting the following objectives for each of the network services listed below:
+
+- Install the packages needed to provide the service
+- Configure SELinux to support the service
+- Use SELinux port labeling to allow services to use non-standard ports
+- Configure the service to start when the system is booted
+- Configure the service for basic operation
+- Configure host-based and user-based security for the service
+
+###HTTP/HTTPS
+- Configure a virtual host
+- Configure access restrictions on directories
+- Deploy a basic CGI application
+- Configure group-managed content
+- Configure TLS security
+
+###DNS
+- Configure a caching-only name server
+- Troubleshoot DNS client issues
+
+###NFS
+- Provide network shares to specific clients
+- Provide network shares suitable for group collaboration
+- Use Kerberos to control access to NFS network shares
+
+###SMB
+- Provide network shares to specific clients
+- Provide network shares suitable for group collaboration
+
+###SMTP
+- Configure a system to forward all email to a central mail server
+
+###SSH
+- Configure key-based authentication
+- Configure additional options described in documentation
+
+###NTP
+- Synchronize time using other NTP peers
+
+###Database services
+- Install and configure MariaDB
+- Backup and restore a database
+- Create a simple database schema
+- Perform simple SQL queries against a database

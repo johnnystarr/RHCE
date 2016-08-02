@@ -59,7 +59,9 @@
 - Synchronize time using other NTP peers
 
 ###Database services
-- `yum install -y mariadb-client mariadb-server` Install and configure MariaDB
+- Install and configure MariaDB
+- `yum install -y mariadb-client mariadb-server` 
+
 - Backup and restore a database
 ```
 # dump / backup

@@ -61,6 +61,13 @@
 ###Database services
 - `yum install -y mariadb-client mariadb-server` Install and configure MariaDB
 - Backup and restore a database
+```
+# dump / backup
+$ mariadbdump > mydb.sql
+# restore
+$ mariadbrestore < mysql.sql
+```
+
 - Create a simple database schema
 
 ```

@@ -86,6 +86,12 @@ Enter password:
 - Perform simple SQL queries against a database
 
 ```
+# Insert Queries
+> INSERT INTO movies (movie_name, movie_type) VALUES ('Star Wars', 1);
+> INSERT INTO movies (movie_name, movie_type) VALUES ('Star Trek', 1);
+> INSERT INTO movies (movie_name, movie_type) VALUES ('Lord Of The Rings', 2);
+
+# Select Queries
 > SELECT * FROM movies;
 > SELECT * FROM movies WHERE movie_type = 1;
 > SELECT * FROM movies WHERE move_name LIKE 'star wars';

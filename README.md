@@ -20,7 +20,16 @@
 - Configure host-based and user-based security for the service
 
 ###HTTP/HTTPS
-- Configure a virtual host
+- `vi /etc/apache2/sites-available/default.conf` Configure a virtual host
+```
+<VirtualHost *:80>
+  ProxyPreserveHost On
+  ProxyRequests Off
+  ServerName mysite.com
+  ServerAlias www.mysite.com
+</VirtualHost>
+```
+
 - Configure access restrictions on directories
 - Deploy a basic CGI application
 - Configure group-managed content
@@ -50,7 +59,7 @@
 - Synchronize time using other NTP peers
 
 ###Database services
-- Install and configure MariaDB
+- `yum install -y mariadb-client mariadb-server` Install and configure MariaDB
 - Backup and restore a database
 - Create a simple database schema
 - Perform simple SQL queries against a database

@@ -44,7 +44,7 @@ echo "$username's shell is $usershell"
 exit 0
 ```
 - `chmod +x get-shell.sh` 
-- `./get-shell.sh <username>'
+- `./get-shell.sh username'
 
 ###HTTP/HTTPS
 - `vi /etc/httpd/sites-available/default.conf` Configure a virtual host

@@ -19,6 +19,32 @@
 - Configure the service for basic operation
 - Configure host-based and user-based security for the service
 
+
+###Scripting
+- Create a script to automate system administration
+- `touch get-shell.sh`
+```
+#!/bin/bash
+if [ $# -eq 0 ]; then
+	username=$USER
+else
+	username=$1
+fi
+
+userinfo=$(getent passwd $username)
+
+if [ $? -ne 0 ]; then
+echo "Error: cannot retrieve info for the user $username"
+exit 2
+fi
+
+usershell=$(echo $userinfo | cut -f 7 -d ":")
+
+echo "$username's shell is $usershell"
+exit 0
+```
+- `chmod +x get-shell.sh` 
+
 ###HTTP/HTTPS
 - `vi /etc/httpd/sites-available/default.conf` Configure a virtual host
 ```

@@ -85,7 +85,9 @@ exit 0
 - Synchronize time using other NTP peers
 
 ###Database services
-- `yum install -y mariadb-client mariadb-server` Install and configure MariaDB
+- Install and configure MariaDB
+- `yum install -y mariadb-client mariadb-server` 
+
 - Backup and restore a database
 ```
 # dump / backup
@@ -100,10 +102,10 @@ $ mariadbrestore < mysql.sql
 mariadb -u username -p
 Enter password:
 
-CREATE DATABASE mydb
-USE mydb
+> CREATE DATABASE mydb;
+> USE mydb;
 
-CREATE TABLE movies (
+> CREATE TABLE movies (
   movie_id INT AUTO_INCREMENT PRIMARY KEY,
   movie_name VARCHAR(255),
   movie_type TINYINT
@@ -112,6 +114,12 @@ CREATE TABLE movies (
 - Perform simple SQL queries against a database
 
 ```
+# Insert Queries
+> INSERT INTO movies (movie_name, movie_type) VALUES ('Star Wars', 1);
+> INSERT INTO movies (movie_name, movie_type) VALUES ('Star Trek', 1);
+> INSERT INTO movies (movie_name, movie_type) VALUES ('Lord Of The Rings', 2);
+
+# Select Queries
 > SELECT * FROM movies;
 > SELECT * FROM movies WHERE movie_type = 1;
 > SELECT * FROM movies WHERE move_name LIKE 'star wars';

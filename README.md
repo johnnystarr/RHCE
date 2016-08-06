@@ -1,5 +1,4 @@
 ###System configuration and management
-- Use network teaming or bonding to configure aggregated network links between two Red Hat Enterprise Linux systems
 - Configure IPv6 addresses and perform basic IPv6 troubleshooting
 - Route IP traffic and create static routes
 - Use firewalld and associated mechanisms such as rich rules, zones and custom rules, to implement packet filtering and configure network address translation (NAT)
@@ -9,6 +8,17 @@
 - Use shell scripting to automate system maintenance tasks
 
 ###Network services
+
+- Use network teaming or bonding to configure aggregated network links between two Red Hat Enterprise Linux systems
+```
+yum -y install teamd
+# nmcli con show
+NAME                UUID                                  TYPE            DEVICE
+Wired connection 1  f32cfcb7-3567-4313-9cf3-bdd87010c7a2  802-3-ethernet  eth1  
+System eth0         257e9416-b420-4218-b1eb-f14302f20941  802-3-ethernet  eth0  
+# nmcli con del f32cfcb7-3567-4313-9cf3-bdd87010c7a2
+# nmcli con del 257e9416-b420-4218-b1eb-f14302f20941
+
 
 ####Network services are an important subset of the exam objectives. RHCE candidates should be capable of meeting the following objectives for each of the network services listed below:
 

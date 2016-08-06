@@ -11,14 +11,14 @@
 
 - Use network teaming or bonding to configure aggregated network links between two Red Hat Enterprise Linux systems
 ```
-**yum -y install teamd**
-**nmcli con show**
+# yum -y install teamd
+# nmcli con show
 NAME                UUID                                  TYPE            DEVICE
 Wired connection 1  f32cfcb7-3567-4313-9cf3-bdd87010c7a2  802-3-ethernet  eth1  
 System eth0         257e9416-b420-4218-b1eb-f14302f20941  802-3-ethernet  eth0  
-**nmcli con del f32cfcb7-3567-4313-9cf3-bdd87010c7a2**
-**nmcli con del 257e9416-b420-4218-b1eb-f14302f20941**
-**nmcli con add type team con-name myteam0 ifname team0 config '{ "runner": {"name": "loadbalance"}}'i**
+# nmcli con del f32cfcb7-3567-4313-9cf3-bdd87010c7a2
+# nmcli con del 257e9416-b420-4218-b1eb-f14302f20941
+# nmcli con add type team con-name myteam0 ifname team0 config '{ "runner": {"name": "loadbalance"}}'i
  team0 config '{ "runner": {"name": "loadbalance"}}'
 [10655.288431] IPv6: ADDRCONF(NETDEV_UP): team0: link is not ready
 [10655.306955] team0: Mode changed to "loadbalance"

@@ -1,6 +1,9 @@
 ###System configuration and management
 - Configure IPv6 addresses and perform basic IPv6 troubleshooting
 - Route IP traffic and create static routes
+'''
+#nmcli connection modify eth0 +ipv4.routes "192.168.122.0/24 10.10.10.1"
+'''
 - Use firewalld and associated mechanisms such as rich rules, zones and custom rules, to implement packet filtering and configure network address translation (NAT)
 - Configure a system to authenticate using Kerberos
 - Configure a system as either an iSCSI target or initiator that persistently mounts an iSCSI target
